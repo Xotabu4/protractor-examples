@@ -11,7 +11,8 @@
 // 2 - using own solution based on jasmine reporter. Thanks to 
 // https://github.com/angular/protractor/issues/114#issuecomment-32251283
 
-// run with - protractor --specs examples/screenshot.js
+// run this as 
+// protractor --specs examples/screenshot.js
 
 
 class ScreenShotOnFailureReporter {
