@@ -1,7 +1,8 @@
 {
-  "name": "preserver2",
+  "name": "protractor-examples",
+  "private": true,
   "version": "1.0.0",
-  "description": "Demonstration project for students2",
+  "description": "Demonstration project for students, with different examples",
   "scripts": {
     "postinstall": "webdriver-manager update",
     "test": "protractor"
