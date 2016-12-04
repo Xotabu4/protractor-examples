@@ -1,7 +1,11 @@
 /////////////////////////////////////////////////////////////////////////////
-// JASMINEJS HOW BEFOREEACH AND AFTER EACH WORKS
+// JASMINEJS: HOW beforeEach AND afterEach WORKS
+// In this file i am showing in which order different jasmine functions executes
+// To see output for this file: run in your commandline with globally installed protractor:
+// protractor --specs examples/jasmine.js 
+// Or you can see example output at the end of file
 
-// Based on number you can see execution order
+// just class to see results in with correct counter. plz ignore
 class Counter {
     constructor() {
         this.innerC = 0
@@ -66,7 +70,8 @@ describe(`parent DESCRIBE block`, ()=> {
 console.log(`${counter.c} - file parsing finished`)
 
 /*
-Output will be something like this:
+Output will be something like this
+notice that dot . - is the point where jasmine track test as passed
 
 1 - file parsing
 2 - file parsing - reading content of describe block

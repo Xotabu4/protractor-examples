@@ -1,7 +1,9 @@
 ///////////////////////////////////////////////////
-//How to get junit XML as a output from your tests 
+// How to get junit XML as a output from your tests 
 // You should use 3rd party lib: https://github.com/larrymyers/jasmine-reporters
 
+
+///////////////////////////////////////////////////
 // SINGLE THREAD (non parallel)
 
 //in your config file:
@@ -15,7 +17,7 @@ onPrepare: function () {
 }
 }
 
-
+///////////////////////////////////////////////////
 // MULTITHREAD (tests are parallel)
 
 //in your config file:
@@ -63,3 +65,5 @@ function combineReportFiles (SPECS_REPORTS_PATH, JUNIT_TEST_REPORT, exitCode) {
     //Returning promise is needed so protractor will wait for it before killing process
     return defferMerge.promise;
 };
+
+///////////////////////////////////////////////////
