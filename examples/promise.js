@@ -1,7 +1,8 @@
 
-it('promise example - how to handle promise rejections', function () {
+/////////////////////////////////////////////////////////////////////////////
+// PROTRACTOR handle non-existing elements
 
-    //Searching for element that does not exist
+    
     let nonExists = $('SOMENONEXTISTING ELEMENT!')
 
     // Notice that in this case error will not be thrown, and will not break the test
@@ -9,4 +10,3 @@ it('promise example - how to handle promise rejections', function () {
         text=> console.log(text),
         err=> console.log('CANNOT FIND YOUR ELEMENT')
     )
-})
