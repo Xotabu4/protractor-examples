@@ -41,7 +41,7 @@ let myCondition = ()=> {
     return $('myElement').getText().then(text=> text == 'Hello World')
 }
 
-browser.wait(myCondition, 5000, 'Expected that element will have text "Hello World" ')
+browser.wait(myCondition(), 5000, 'Expected that element will have text "Hello World" ')
 
 
 /////////////////////////////////////////////////////////////////////////////

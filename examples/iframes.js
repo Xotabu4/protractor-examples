@@ -47,7 +47,7 @@ class AboutUsFragment {
     }
 
     getContactInfo() {
-        _executeInIframe(()=>{
+        return _executeInIframe(()=>{
             return $('contactus').getText()
         })
     }

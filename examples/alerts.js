@@ -10,7 +10,7 @@ browser.switchTo().alert().accept()
 
 
 //authenticateAs - you can use for login to some sites
-browser.switchTo().alert().authenticateAs()
+browser.switchTo().alert().authenticateAs('admin', 'root')
 
 //But sometimes you need to wait for alert to appear:
 let EC = protractor.ExpectedConditions;
