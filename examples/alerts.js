@@ -13,6 +13,6 @@ browser.switchTo().alert().accept()
 browser.switchTo().alert().authenticateAs('admin', 'root')
 
 //But sometimes you need to wait for alert to appear:
-let EC = protractor.ExpectedConditions;
+let EC = protractor.ExpectedConditions
 browser.wait(EC.alertIsPresent(), 5000, "Alert is not getting present :(")
 browser.switchTo().alert().accept()
