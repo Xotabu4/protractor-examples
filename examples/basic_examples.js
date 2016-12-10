@@ -4,9 +4,10 @@ expect($('myElement').getText()).toBe('My Text', 'Element should have "My Text" 
 // OR
 expect($('myElement').getText()).toContain('MyText', 'Element should contain "My Text" in it')
 
-// Sometimes you might want to use this to assert that atleast one element has needed text
+// Sometimes you might want to use this to assert that at least one element has needed text
 // Uses result of ExpectedCondition evaluation (true/false)
 let text = 'MyText'
+
 let textAtleastInOneElement = EC.or(
     EC.textToBePresentInElement($('first'), text),
     EC.textToBePresentInElement($('second'), text),
@@ -14,13 +15,13 @@ let textAtleastInOneElement = EC.or(
 )
 expect(textAtleastInOneElement()).toBeTruthy('Atleast one of elements should contain "My Text" in it')
 
-//Of course, it is much easier with ElementArrayFinder
+// Of course, it is much easier with ElementArrayFinder
 expect($$('myElement').getText()).toContain('My Text', 'Atleast one of elements should contain "My Text" in it')
 
 /////////////////////////////////////////////////////////////////////////////
-//Assert element not exist
+// Assert element does not exist
 expect($('myElement').isDisplayed()).toBeFalsy('my Element should not exist')
-//or, less prefered
+// or, less prefered solution
 expect($('myElement').isPresent()).toBeFalsy('my Element should not exist')
 
 /////////////////////////////////////////////////////////////////////////////
@@ -41,7 +42,7 @@ let myCondition = ()=> {
     return $('myElement').getText().then(text=> text == 'Hello World')
 }
 
-browser.wait(myCondition(), 5000, 'Expected that element will have text "Hello World" ')
+browser.wait(myCondition(), 5000, 'Expected that element will have text "Hello World"')
 
 
 /////////////////////////////////////////////////////////////////////////////
@@ -68,14 +69,14 @@ expect(classes).toContain('active')
 /////////////////////////////////////////////////////////////////////////////
 // Finding
 
-//Finding element by text
+// Finding element by text
 element(by.cssContainingText('myElement', 'Hello World!')).click()
 
-//Searching for element inside element
+// Searching for element inside element
 let innerElement = $('myElement').$('notMyElement')
-innerElement.click() //click goes to notMyElement
+innerElement.click() // click goes to notMyElement
 
-//Getting third element
+// Getting third element
 $$('myElement').get(2).click()
 
-//Also look at .map() and .filter() examples
+// Also look at .map() and .filter() examples

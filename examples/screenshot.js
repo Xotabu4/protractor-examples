@@ -1,5 +1,3 @@
-
-
 /////////////////////////////////////////////////////////////////////////////
 // Take screenshot on failure
 
@@ -25,7 +23,7 @@ class ScreenShotOnFailureReporter {
      */
     _writeScreenShot (data, filename) {
         let screenShotDirectory = this.config.screenShotDirectory
-        var fs = require('fs');
+        let fs = require('fs');
         let stream = fs.createWriteStream(screenShotDirectory + filename)
         stream.write(new Buffer(data, 'base64'))
         stream.end()
@@ -37,10 +35,10 @@ class ScreenShotOnFailureReporter {
     specDone(result) {
         console.log(result.status)
         if (result.status == 'failed') {
-            //Will be executed only if spec is failed
+            // Will be executed only if spec is failed
             browser.takeScreenshot().then(png=> {
-                //Keep eye on file name
-                //you might want to change it - not all symbols can be in file name
+                // Keep eye on file name
+                // you might want to change it - not all symbols can be in file name
                 let filename =  result.fullName + '.png';
                 this._writeScreenShot(png, filename);
             });

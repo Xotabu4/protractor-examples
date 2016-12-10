@@ -1,6 +1,6 @@
 /////////////////////////////////////////////////////////////////////////////
 // JASMINEJS: HOW beforeEach AND afterEach WORKS
-// In this file i am showing in which order different jasmine functions executes
+// In this file I am showing in which order different jasmine functions executes
 // To see output for this file: run in your commandline with globally installed protractor:
 // protractor --specs examples/jasmine.js 
 // Or you can see example output at the end of file
@@ -22,34 +22,34 @@ console.log(`${counter.c} - file parsing`)
 describe(`parent DESCRIBE block`, ()=> {
     console.log(`${counter.c} - file parsing - reading content of describe block`)
 
-    beforeAll(()=>{
+    beforeAll(()=> {
         console.log(`${counter.c} - beforeAll execution`)
     })
 
-    beforeAll(()=>{
+    beforeAll(()=> {
         console.log(`${counter.c} - beforeAll execution - executed in declaration order`)
     })
 
-    beforeEach(()=>{
+    beforeEach(()=> {
         console.log(`${counter.c} - beforeEach execution`)
     })
 
-    beforeEach(()=>{
+    beforeEach(()=> {
         console.log(`${counter.c} - beforeEach execution - executed in declaration order`)
     })
 
-    afterAll(()=>{
+    afterAll(()=> {
         console.log(`${counter.c} - afterALL execution`)
     })
 
-    afterEach(()=>{
+    afterEach(()=> {
         console.log(`${counter.c} - afterEACH execution`)
     })
 
-    describe(`Nested describe block`, ()=>{
+    describe(`Nested describe block`, ()=> {
         console.log(`${counter.c} - file parsing - reading nested describe blocks as well`)
 
-        beforeEach(()=>{
+        beforeEach(()=> {
             console.log(`${counter.c} - Nested beforeEach executed!`)
         })
         
@@ -58,10 +58,10 @@ describe(`parent DESCRIBE block`, ()=> {
         })
     })
     
-    //DATAPROVIDER
+    // DATAPROVIDER
     let dataCollection = [1, 2, 3, 4, 5]
-    dataCollection.map(data=>{
-        it(`${counter.c} TEST for ${data}`, ()=>{
+    dataCollection.map(data=> {
+        it(`${counter.c} TEST for ${data}`, ()=> {
             console.log(`TEST number ${data} executed!`)
         })
     })
