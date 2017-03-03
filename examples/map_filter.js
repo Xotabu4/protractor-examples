@@ -24,4 +24,4 @@ let filtererd = $$(`someELEMENT`).filter((elm, index)=> {
     return elm.getText().then(text=> text == `admin`)
 })
 // If you need to be sure that there is only 1 element with text `admin` just assert that
-expect(filtered.count()).toBe(0, `Should be only 1 element with text admin`)
+expect(filtered.count()).toBe(1, `Should be only 1 element with text admin`)
