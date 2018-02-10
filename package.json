@@ -5,12 +5,16 @@
   "description": "Demonstration project for students, with different examples",
   "scripts": {
     "postinstall": "webdriver-manager update",
-    "test": "protractor"
+    "example-jasmine": "protractor ./protractor.conf.js --specs=\"./examples/jasmine.ts\"",
+    "example-alerts": "protractor ./protractor.conf.js --specs=\"./examples/alerts.ts\""
   },
   "author": "Oleksandr Khotemskyi <xotabu4@gmail.com> (https://github.com/Xotabu4)",
   "license": "MIT",
-
-  "dependencies":{
-    "protractor": "^4.0.11"
+  "dependencies": {
+    "@types/jasmine": "^2.8.6",
+    "@types/node": "^9.4.4",
+    "protractor": "^5.2.2",
+    "typescript": "^2.7.1",
+    "ts-node": "^4.1.0"
   }
 }

@@ -1,13 +1,14 @@
-module.exports.config = {
-    useAllAngular2AppRoots: true,
-    directConnect: true,
-    baseUrl: 'http://www.protractortest.org/testapp/ng1/#/form',
-    onPrepare: function () {
-        //Making ExpectedConditions accessible everywhere thru shortcut
-        global.EC = protractor.ExpectedConditions;
+require('ts-node').register();
 
-        beforeEach(function () {
-            //empty
-        })
-    }
+module.exports.config = {
+    baseUrl: 'http://the-internet.herokuapp.com',
+
+
+    onPrepare: async function() {
+        // The internet website is not angular:
+        await browser.waitForAngularEnabled(false)
+
+    },
+    useBlockingProxy: true,
+    highlightDelay: 1000
 }
